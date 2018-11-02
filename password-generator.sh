@@ -10,7 +10,7 @@ base64 raw > translated.txt
 
 if [ -z "$1"  ]
 then
-    read -p "Enter password lenght desired: " PWLEN
+    read -p "Enter password length desired: " PWLEN
     if [ -z "$PWLEN" ]
     then
         PWLEN=$MXLEN
