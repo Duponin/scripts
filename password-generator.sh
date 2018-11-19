@@ -1,11 +1,11 @@
-#! /bin/env bash
+#!/usr/bin/env bash
 
 PWDIR=/tmp/password-generator
 MXLEN=77
 
 mkdir -p $PWDIR
 cd $PWDIR
-dd if=/dev/urandom of=raw bs=1K count=1 status=none
+dd if=/dev/urandom of=raw bs=100K count=1 status=none
 base64 raw > translated.txt
 
 if [ -z "$1"  ]
