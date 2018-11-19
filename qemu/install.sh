@@ -18,7 +18,7 @@ done
 
 
 # Packages installation
-sudo xbps-install -S --yes qemu libvirt dbus
+sudo xbps-install -S --yes qemu libvirt dbus virt-manager
 
 # Services activation
 sudo ln -s /etc/sv/libvirtd  /var/service
