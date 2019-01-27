@@ -4,6 +4,8 @@
 
 I put in this repo my scripts. It can be useful like useless.
 
+`WARNING!` Always refer to help command inside scripts, this man page may not be up to date!
+
 ## Your code is ugly!
 
 1. Fork it
@@ -34,4 +36,20 @@ It accepts 2 arguments:
 
 If no argument is provided, after the genaration, it only asks for $1.\
 If argument is greater or equal 0, it takes the MAX value.
+
+### upload2data (V 0.1)
+
+Pseudo minimalist script to send files to machine over SSH. You will need to have a SSH config file.
+
+Change the var DIST\_MACHINE according to the machine you want to upload.\
+Change the var DIST\_DIR according to the location you want to place the file.\
+
+A help is provided with the `--help` or `-h` flag.
+
+Arguments:
+* `--help` `-h` to have some help
+* `--tar` `-t` to make a tarball before the shipment (removed after the send)
+* `--send` `-s` mandatory is you want to send a file without a tar or antything else
+* `--version` `-v` to display the current version of the software
+
 
