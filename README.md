@@ -52,4 +52,10 @@ Arguments:
 * `--send` `-s` mandatory is you want to send a file without a tar or antything else
 * `--version` `-v` to display the current version of the software
 
+#### Todo
+
+* Better display (into an array)
+* Sanitize filename (with argument, or for tarball)
+* Output data's URL
+* Better argument handle
 
