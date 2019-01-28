@@ -42,7 +42,8 @@ If argument is greater or equal 0, it takes the MAX value.
 Pseudo minimalist script to send files to machine over SSH. You will need to have a SSH config file.
 
 Change the var DIST\_MACHINE according to the machine you want to upload.\
-Change the var DIST\_DIR according to the location you want to place the file.
+Change the var DIST\_DIR according to the location you want to place the file.\
+Change teh var STP\_URL to the base URL of your server.
 
 A help is provided with the `--help` or `-h` flag.
 
