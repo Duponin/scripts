@@ -60,10 +60,10 @@ A help is provided with the `--help` or `-h` flag.
 * Verify is the file is alread present on the server (associated with --force argument)
 * Sanitize filename (with argument, or for tarball)
 * ~~Output data's URL~~
-* Compress the tarball
-    * Zip
-    * Gz
-    * xz
-* Zip a directory for better compatibility
+* ~~Compress the tarball~~
+    * ~~Zip~~
+    * ~~Gz~~
+    * ~~xz~~
+* ~~Zip a directory for better compatibility~~
 * Better argument handle
 
