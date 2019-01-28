@@ -42,19 +42,20 @@ If argument is greater or equal 0, it takes the MAX value.
 Pseudo minimalist script to send files to machine over SSH. You will need to have a SSH config file.
 
 Change the var DIST\_MACHINE according to the machine you want to upload.\
-Change the var DIST\_DIR according to the location you want to place the file.\
+Change the var DIST\_DIR according to the location you want to place the file.
 
 A help is provided with the `--help` or `-h` flag.
 
-Arguments:
-* `--help` `-h` to have some help
-* `--tar` `-t` to make a tarball before the shipment (removed after the send)
-* `--send` `-s` mandatory is you want to send a file without a tar or antything else
-* `--version` `-v` to display the current version of the software
+| Argument         | Description                                                         |
+|:-----------------|:--------------------------------------------------------------------|
+| `--help` `-h`    | To have some help                                                   |
+| `--tar` `-t`     | To make a tarball before the shipment (removed after the send)      |
+| `--send` `-s`    | Mandatory if you want to send a file without a tar or anything else |
+| `--version` `-v` | To display the current version of the software                      |
 
 #### Todo
 
-* Better display (into an array)
+* ~~Better display (into an array)~~
 * Sanitize filename (with argument, or for tarball)
 * Output data's URL
 * Better argument handle
