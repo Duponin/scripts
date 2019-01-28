@@ -2,12 +2,18 @@
 
 DIST_DIR="/var/www/data.dupon.in/c"
 DIST_MACHINE="data"
-VERSION="0.1"
+STD_URL="https://data.dupon.in/c/"
+VERSION="0.1.1"
 FILE="file"
 
 sendFile()
 {
     scp $FILE $DIST_MACHINE:$DIST_DIR
+}
+
+echoURL()
+{
+    printf "%b%b\n" "$STD_URL" "$FILE"
 }
 
 if [[ $1 = "--help" || $1 = "-h" ]]; then
@@ -33,5 +39,9 @@ fi
 if [[ $1 = "--send" || $1 = "-s" ]]; then
     FILE="$2"
     sendFile
+fi
+
+if [[ $FILE != "file" ]]; then
+    echoURL
 fi
 

@@ -37,7 +37,7 @@ It accepts 2 arguments:
 If no argument is provided, after the genaration, it only asks for $1.\
 If argument is greater or equal 0, it takes the MAX value.
 
-### upload2data (V 0.1)
+### upload2data (V 0.1.1)
 
 Pseudo minimalist script to send files to machine over SSH. You will need to have a SSH config file.
 
@@ -53,10 +53,15 @@ A help is provided with the `--help` or `-h` flag.
 | `--send` `-s`    | Mandatory if you want to send a file without a tar or anything else |
 | `--version` `-v` | To display the current version of the software                      |
 
-#### Todo
+#### Todo (upload2data)
 
 * ~~Better display (into an array)~~
 * Sanitize filename (with argument, or for tarball)
-* Output data's URL
+* ~~Output data's URL~~
+* Compress the tarball
+    * Zip
+    * Gz
+    * xz
+* Zip a directory for better compatibility
 * Better argument handle
 
