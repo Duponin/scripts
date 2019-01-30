@@ -8,8 +8,7 @@ FILE="file"
 
 sendFile()
 {
-    #scp $FILE $DIST_MACHINE:$DIST_DIR
-    echo "$FILE $DIST_MACHINE:$DIST_DIR"
+    scp $FILE $DIST_MACHINE:$DIST_DIR
 }
 
 echoURL()
@@ -39,7 +38,7 @@ applyTar()
 {
     FILE_OLD="$FILE"
     FILE="$(printf "$FILE%b\n" ".tar")"
-    tar cvf $FILE $FILE_OLD
+    tar cf $FILE $FILE_OLD
 }
 
 applyZip()
