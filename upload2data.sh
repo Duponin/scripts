@@ -20,17 +20,17 @@ concatenate()
 {
     if [[ $1 = "tar" || $1 = "t" ]]; then
         applyTar
-    fi 
-    if [[ $1 = "tgz" ]]; then
+    elif [[ $1 = "tgz" ]]; then
         applyTar
         applyGz
-    fi
-    if [[ $1 = "txz" ]]; then
+    elif [[ $1 = "txz" ]]; then
         applyTar
         applyXz
-    fi
-    if [[ $1 = "zip" ]]; then
+    elif [[ $1 = "zip" ]]; then
         applyZip
+    else
+        echo "Format unsupported."
+        exit 1
     fi
 }
 
@@ -67,21 +67,22 @@ if [[ $1 = "--help" || $1 = "-h" ]]; then
     echo -e "-s --send \t Send the file"
     echo -e "-c --concatenate Bundle the file/folder (option: tar tgz txz zip)"
     echo -e "-v --version \t Show the current software version"
-fi
 
-if [[ $1 = "--version" || $1 = "-v" ]]; then
+elif [[ $1 = "--version" || $1 = "-v" ]]; then
     printf "upload2data version: %b\n" "$VERSION"
-fi
 
-if [[ $1 = "--concatenate" || $1 = "-c" ]]; then
+elif [[ $1 = "--concatenate" || $1 = "-c" ]]; then
     FILE="$3"
     concatenate "$2"
     sendFile
-fi
 
-if [[ $1 = "--send" || $1 = "-s" ]]; then
+elif [[ $1 = "--send" || $1 = "-s" ]]; then
     FILE="$2"
     sendFile
+    
+else
+    echo "Option not recognized."
+    exit 1
 fi
 
 if [[ $FILE != "file" ]]; then
