@@ -47,12 +47,12 @@ Change teh var STP\_URL to the base URL of your server.
 
 A help is provided with the `--help` or `-h` flag.
 
-| Argument         | Description                                                         |
-|:-----------------|:--------------------------------------------------------------------|
-| `--help` `-h`    | To have some help                                                   |
-| `--tar` `-t`     | To make a tarball before the shipment (removed after the send)      |
-| `--send` `-s`    | Mandatory if you want to send a file without a tar or anything else |
-| `--version` `-v` | To display the current version of the software                      |
+| Argument             | Description                                                           |
+| :-----------------   | :-------------------------------------------------------------------- |
+| `-h` `--help`        | To have some help                                                     |
+| `-c` `--concatenate` | Bundle the file/folder (option: tar tgz txz zip)                      |
+| `-s` `--send`        | Mandatory if you want to send a file without a tar or anything else   |
+| `-v` `--version`     | To display the current version of the software                        |
 
 #### Todo (upload2data)
 

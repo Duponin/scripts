@@ -63,10 +63,10 @@ applyXz()
 if [[ $1 = "--help" || $1 = "-h" ]]; then
     echo -e "upload2data [argument] [FILE]"
     echo -e ""
-    echo -e "--help -h \t Show this help"
-    echo -e "--send -s \t Send the file"
-    echo -e "--tar -t \t Make a tarball before send (implicite -s)"
-    echo -e "--version -v \t Show the current software version"
+    echo -e "-h --help \t Show this help"
+    echo -e "-s --send \t Send the file"
+    echo -e "-c --concatenate Bundle the file/folder (option: tar tgz txz zip)"
+    echo -e "-v --version \t Show the current software version"
 fi
 
 if [[ $1 = "--version" || $1 = "-v" ]]; then
