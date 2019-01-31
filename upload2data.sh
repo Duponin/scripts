@@ -38,25 +38,25 @@ applyTar()
 {
     FILE_OLD="$FILE"
     FILE="$(printf "$FILE%b\n" ".tar")"
-    tar cf $FILE $FILE_OLD
+    tar cvf $FILE $FILE_OLD
 }
 
 applyZip()
 {
     FILE_OLD=$FILE
     FILE="$(printf "$FILE%b\n" ".zip")"
-    zip -9  $FILE $FILE_OLD
+    zip -9 -v  $FILE $FILE_OLD
 }
 
 applyGz()
 {
-    gzip -9 -m $FILE
+    gzip -9 -v -m $FILE
     FILE="$(printf "$FILE%b\n" ".gz")"
 }
 
 applyXz()
 {
-    xz -9 $FILE
+    xz -9 -v $FILE
     FILE="$(printf "$FILE%b\n" ".xz")"
 }
 
