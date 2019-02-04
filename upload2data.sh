@@ -7,9 +7,9 @@ source lib/config.shlib
 DIST_DIR=""
 DIST_MACHINE=""
 STD_URL=""
-VERSION=""
-FILE=""
 
+VERSION="0.2.0"
+FILE="file"
 CONFIG_FILE="config.cfg"
 CONFIG_FILE_DEFAULT="config.cfg.default"
 

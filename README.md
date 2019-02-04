@@ -39,14 +39,18 @@ It accepts 2 arguments:
 If no argument is provided, after the genaration, it only asks for $1.\
 If argument is greater or equal 0, it takes the MAX value.
 
-## upload2data
-`V 0.1.2`
+## upload2data.sh
+`V 0.2.0`
 
-Pseudo minimalist script to send files to machine over SSH. You will need to have a SSH config file.
+Pseudo minimalist script to send files to machine over SSH. You will need to have a SSH config file.\
+If you don't know what is it, checkout my example one [here](https://github.com/Duponin/dotfiles/blob/master/.ssh/config.example).
 
-Change the var DIST\_MACHINE according to the machine you want to upload.\
-Change the var DIST\_DIR according to the location you want to place the file.\
-Change teh var STP\_URL to the base URL of your server.
+You will need to edit the config file. `cp config.cfg.default config.cfg`\
+```
+UPLOAD2DATA_DIST_DIR="/var/www/website/"
+UPLOAD2DATA_DIST_MACHINE="website"
+UPLOAD2DATA_STD_URL="https://data.domain.tld"
+```
 
 A help is provided with the `--help` or `-h` flag.
 
