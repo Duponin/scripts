@@ -1,10 +1,26 @@
 #!/usr/bin/env bash
 
-DIST_DIR="/var/www/data.dupon.in/c"
-DIST_MACHINE="data"
-STD_URL="https://data.dupon.in/c/"
-VERSION="0.1.1"
-FILE="file"
+source lib/config.shlib
+
+# Do not edit those variables, it will be overwrited
+# It's declarated here to be global variables
+DIST_DIR=""
+DIST_MACHINE=""
+STD_URL=""
+VERSION=""
+FILE=""
+
+CONFIG_FILE="config.cfg"
+CONFIG_FILE_DEFAULT="config.cfg.default"
+
+loadConfig ()
+{
+    DIST_DIR=$(config_get UPLOAD2DATA_DIST_DIR)
+    DIST_MACHINE=$(config_get UPLOAD2DATA_DIST_MACHINE)
+    STD_URL=$(config_get UPLOAD2DATA_STD_URL)
+    VERSION=$(config_get UPLOAD2DATA_VERSION)
+    FILE=$(config_get UPLOAD2DATA_FILE)
+}
 
 sendFile()
 {
@@ -60,6 +76,14 @@ applyXz()
     FILE="$(printf "$FILE%b\n" ".xz")"
 }
 
+if [[ ! -f config.cfg ]]; then
+    echo "Config file missing!"
+    echo -e "Do \e[32m'cp config.cfg.default config.cfg'\e[0m and edit according to your need."
+    exit 1
+else
+    loadConfig
+fi
+
 if [[ $1 = "--help" || $1 = "-h" ]]; then
     echo -e "upload2data [argument] [FILE]"
     echo -e ""
@@ -79,7 +103,7 @@ elif [[ $1 = "--concatenate" || $1 = "-c" ]]; then
 elif [[ $1 = "--send" || $1 = "-s" ]]; then
     FILE="$2"
     sendFile
-    
+
 else
     echo "Option not recognized."
     exit 1

@@ -1,0 +1,5 @@
+UPLOAD2DATA_DIST_DIR="/var/www/website/"
+UPLOAD2DATA_DIST_MACHINE="website"
+UPLOAD2DATA_STD_URL="https://data.domain.tld"
+UPLOAD2DATA_VERSION="0.1.1"
+UPLOAD2DATA_FILE="file"
