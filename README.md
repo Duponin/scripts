@@ -21,13 +21,15 @@ But you can also:
 
 More seriously, yes it can be awful and have issues but I want my code to work. I'm not targeting to be the best and to have the perfect code.
 
-## Explanation & tips
+# Explanation & tips
 
-### google-cloud-sdk.sh (V. 0.1)
+## google-cloud-sdk.sh
+`V. 0.1`
 
 Script to install google cloud sdk &Cie. Probably out of date. You may need to change the package version in the downloader etc.
 
-### password-generator.sh (V 0.1)
+## password-generator.sh
+`V 0.1`
 
 Script to generate a password using only built-in command. Light weight and probably not secure, processed files are stored in /tmp (changeable with a VAR in the script header).\
 It accepts 2 arguments:
@@ -37,7 +39,8 @@ It accepts 2 arguments:
 If no argument is provided, after the genaration, it only asks for $1.\
 If argument is greater or equal 0, it takes the MAX value.
 
-### upload2data (V 0.1.1)
+## upload2data
+`V 0.1.2`
 
 Pseudo minimalist script to send files to machine over SSH. You will need to have a SSH config file.
 
@@ -54,7 +57,7 @@ A help is provided with the `--help` or `-h` flag.
 | `-s` `--send`        | Mandatory if you want to send a file without a tar or anything else   |
 | `-v` `--version`     | To display the current version of the software                        |
 
-#### Todo (upload2data)
+### Todo (upload2data)
 
 * ~~Better display (into an array)~~
 * Verify is the file is alread present on the server (associated with --force argument)
