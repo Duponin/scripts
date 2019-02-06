@@ -14,7 +14,7 @@ DIST_DIR=""
 DIST_MACHINE=""
 STD_URL=""
 
-VERSION="0.2.0"
+VERSION="0.2.1"
 FILE="file"
 CONFIG_FILE="config.cfg"
 CONFIG_FILE_DEFAULT="config.cfg.default"

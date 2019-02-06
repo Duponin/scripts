@@ -40,7 +40,7 @@ If no argument is provided, after the genaration, it only asks for $1.\
 If argument is greater or equal 0, it takes the MAX value.
 
 ## upload2data.sh
-`V 0.2.0`
+`V 0.2.1`
 
 Pseudo minimalist script to send files to machine over SSH. You will need to have a SSH config file.\
 If you don't know what is it, checkout my example one [here](https://github.com/Duponin/dotfiles/blob/master/.ssh/config.example).
