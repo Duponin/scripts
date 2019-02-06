@@ -45,11 +45,14 @@ If argument is greater or equal 0, it takes the MAX value.
 Pseudo minimalist script to send files to machine over SSH. You will need to have a SSH config file.\
 If you don't know what is it, checkout my example one [here](https://github.com/Duponin/dotfiles/blob/master/.ssh/config.example).
 
-You will need to edit the config file. `cp config.cfg.default config.cfg`\
+You will need to:
+* edit the config file. `cp config.cfg.default config.cfg` (don't forget to edit it after the copy)
+* add the SCRIPTS env variable according to the script folder location. i.e: `export SCRIPTS="/home/$USER/scripts"`
+
 ```
-UPLOAD2DATA_DIST_DIR="/var/www/website/"
-UPLOAD2DATA_DIST_MACHINE="website"
-UPLOAD2DATA_STD_URL="https://data.domain.tld"
+UPLOAD2DATA_DIST_DIR=/var/www/website/
+UPLOAD2DATA_DIST_MACHINE=website
+UPLOAD2DATA_STD_URL=https://data.domain.tld
 ```
 
 A help is provided with the `--help` or `-h` flag.
