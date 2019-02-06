@@ -31,6 +31,8 @@ loadConfig ()
 sendFile()
 {
     scp $FILE $DIST_MACHINE:$DIST_DIR
+    echo $DIST_MACHINE
+    echo $DIST_DIR
 }
 
 echoURL()
