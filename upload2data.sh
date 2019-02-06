@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
-source lib/config.shlib
+if [[ -z "$SCRIPTS" ]]; then
+    echo -e "The \e[92m\$SCRIPTS\e[0m env variable is not defined. Please fix it."
+    echo -e "Read the manual or help flag to get some support."
+    exit 1
+fi
+
+source $SCRIPTS/lib/config.shlib
 
 # Do not edit those variables, it will be overwrited
 # It's declarated here to be global variables
@@ -76,7 +82,7 @@ applyXz()
     FILE="$(printf "$FILE%b\n" ".xz")"
 }
 
-if [[ ! -f config.cfg ]]; then
+if [[ ! -f "$SCRIPTS/config.cfg" ]]; then
     echo "Config file missing!"
     echo -e "Do \e[32m'cp config.cfg.default config.cfg'\e[0m and edit according to your need."
     exit 1
