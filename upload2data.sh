@@ -31,8 +31,6 @@ loadConfig ()
 sendFile()
 {
     scp $FILE $DIST_MACHINE:$DIST_DIR
-    echo $DIST_MACHINE
-    echo $DIST_DIR
 }
 
 echoURL()
@@ -89,7 +87,11 @@ if [[ ! -f "$SCRIPTS/config.cfg" ]]; then
     echo -e "Do \e[32m'cp config.cfg.default config.cfg'\e[0m and edit according to your need."
     exit 1
 else
+    # Little trick needed to load the config where ever you launch the script
+    USER_DIR=$PWD
+    cd $SCRIPTS
     loadConfig
+    cd $USER_DIR
 fi
 
 if [[ $1 = "--help" || $1 = "-h" ]]; then
